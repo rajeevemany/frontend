@@ -1,3 +1,4 @@
+"use client";
 type Recruit = {
   id: number;
   name: string;
@@ -8,7 +9,7 @@ type Recruit = {
 };
 
 async function getRecruits(): Promise<Recruit[]> {
-  const res = await fetch("http://localhost:3000/api/recruits", {
+  const res = await fetch("/api/recruits", {
     cache: "no-store",
   });
 
